@@ -1,0 +1,310 @@
+html {
+    scroll-behavior: smooth;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  body{
+    background-color:rgb(8 0 0 / 92%);
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  .nav{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+  .navic {
+    padding: 2rem;
+    cursor: pointer;
+  }
+  .div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    height: 90vh;
+  }
+  
+  .name {
+    margin-left: 10rem; /* Push name to the right of the image */
+  }
+  
+  .name h3 {
+    color: white;
+    animation: name 3s infinite;
+    font-size: 1.5rem;
+  }
+  
+  .name h3 .lett {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: pop 0.5s forwards;
+  }
+  
+  .about {
+    display: flex; /* Align icons in a row */
+    justify-content: flex-start; /* Left align them */
+    margin-top: 2rem; /* Add spacing below the name */
+    margin-left: 10rem;
+    margin-bottom: 5rem;
+  }
+  
+  /* .about .links{
+    margin: 0 0.5rem;
+   
+  }
+  .about .links img{
+    height:2rem;
+    width: 2rem;
+   
+  } */
+  .ab{
+    color: #00dbff;
+    font-size: 2rem;
+    text-decoration: overline 1px white;
+    text-underline-offset: 1px;
+    /* margin-bottom: 6rem; */
+    margin-top: 2rem;
+  }
+  .images {
+    background-image: url(./shweta.jpeg);
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    z-index: 1;
+    display: flex;
+     justify-content:center ;
+    overflow: hidden;
+    position: inherit;
+    margin-left: 2rem;
+    border-radius: 50%;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
+  }
+  .links a {
+    display: inline-block; /* Ensures the <a> tag behaves like a block for styling */
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+    background-size: cover; /* Ensures the image fills the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    margin: 5px; /* Adds spacing between icons */
+  }
+  
+  .insta {
+    background-image: url(./Images/instagram.png);
+  }
+  
+  .linkedin {
+    background-image: url(./Images/linkedin.png);
+  }
+  
+  .tell {
+    background-image: url(./Images/phone-call.png);
+  }
+  
+  .gmail {
+    background-image: url(./Images/gmail.png);
+  }
+  
+  
+  .patti {
+    height: 90px;
+    width: 450px;
+    background-color: #fdc0ffba;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .imgp {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top:5rem;
+  }
+  
+  @keyframes pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes name {
+    0% {
+      color: #00dbff;
+    }
+    33% {
+      color: #00ffbf;
+    }
+    66% {
+      color: #00ff38;
+    }
+    88% {
+      color: #d0ff00;
+    }
+    100% {  
+      color: #00dbff;
+    }
+  }
+  .imagess {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 90vh; /* Adjust the height as needed */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: smoothSlideAnimation 3s infinite;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  }
+  .stat {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Animation keyframes */
+  @keyframes smoothSlideAnimation {
+    0%, 20% {
+      opacity: 1;
+    }
+    30%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Stagger animations for each slide */
+  .slide:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .slide:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .slide:nth-child(3) {
+    animation-delay: 2s;
+  }
+  
+  .div2{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .pro1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   /* padding-top: 5rem; */
+  }
+  .heddesc {
+  padding-right: 5rem;
+  }
+  .slidei {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: smoothSlideAnimation 3s infinite;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    border-radius: 5px;
+  }
+  .slidei:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .slidei:nth-child(2) {
+    animation-delay: 2s;
+  }
+  .slidei:nth-child(3) {
+    animation-delay: 4s;
+  }
+  .slidei:nth-child(4) {
+    animation-delay: 6s;
+  }
+  .slidei:nth-child(5) {
+    animation-delay: 8s;
+  }
+  .stats {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .headdesc > .heading , pre{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .details{
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .pro_img{
+    height: 20rem;
+    width: 30rem;
+    padding: 5rem 5rem 0rem 5rem;
+  }
+  .div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    height: 90vh;
+    color: white;
+  }
+  
+  ul {
+    padding: 3rem;
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 0;
+  }
+  
+  .skillset {
+    display: flex;
+    justify-content: space-around; /* Distribute the ul items evenly */
+    align-items: flex-start; /* Align them at the top */
+    width: 100%; /* Make sure it takes the full width */
+  }
+  
+  .div3 h4{
+    color: white;  
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(255, 255, 255);
+    margin-top: 8rem;
+  }
+  
